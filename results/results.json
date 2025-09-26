@@ -1,0 +1,164 @@
+{
+  "results": [
+    {
+      "email": "suket02gurjar@yahoo.co.in",
+      "local_part": "suket02gurjar",
+      "domain": "yahoo.co.in",
+      "syntax_ok": true,
+      "disposable": false,
+      "role_based": false,
+      "free_provider": false,
+      "mx_hosts": [
+        "mx-apac.mail.gm0.yahoodns.net"
+      ],
+      "mx_ok": true,
+      "spf": true,
+      "dkim": false,
+      "dmarc": true,
+      "smtp_tested": true,
+      "smtp_ok": null,
+      "catch_all": null,
+      "smtp_reason": "Temporary errors encountered (4xx / greylisting) -> ambiguous",
+      "score": 75,
+      "final_status": "valid",
+      "notes": [
+        "Temporary errors encountered (4xx / greylisting) -> ambiguous"
+      ],
+      "probe_details": [
+        {
+          "host": "mx-apac.mail.gm0.yahoodns.net",
+          "target": {
+            "code": null,
+            "message": "connect_error:timed out",
+            "accepted": false,
+            "perm": false,
+            "temp": true
+          },
+          "random": {
+            "code": null,
+            "message": "connect_error:timed out",
+            "accepted": false,
+            "perm": false,
+            "temp": true
+          }
+        }
+      ]
+    },
+    {
+      "email": "jeet8patel1970@gmail.com",
+      "local_part": "jeet8patel1970",
+      "domain": "gmail.com",
+      "syntax_ok": true,
+      "disposable": false,
+      "role_based": false,
+      "free_provider": true,
+      "mx_hosts": [
+        "gmail-smtp-in.l.google.com",
+        "alt1.gmail-smtp-in.l.google.com",
+        "alt3.gmail-smtp-in.l.google.com",
+        "alt2.gmail-smtp-in.l.google.com",
+        "alt4.gmail-smtp-in.l.google.com"
+      ],
+      "mx_ok": true,
+      "spf": true,
+      "dkim": false,
+      "dmarc": true,
+      "smtp_tested": true,
+      "smtp_ok": true,
+      "catch_all": false,
+      "smtp_reason": "At least one MX accepts target but rejects random -> target likely exists",
+      "score": 100,
+      "final_status": "valid",
+      "notes": [
+        "At least one MX accepts target but rejects random -> target likely exists"
+      ],
+      "probe_details": [
+        {
+          "host": "gmail-smtp-in.l.google.com",
+          "target": {
+            "code": 250,
+            "message": "2.1.5 OK 00721157ae682-755ef5c77f2si26199007b3.50 - gsmtp",
+            "accepted": true,
+            "perm": false,
+            "temp": false
+          },
+          "random": {
+            "code": 550,
+            "message": "5.1.1 The email account that you tried to reach does not exist. Please try\n5.1.1 double-checking the recipient's email address for typos or\n5.1.1 unnecessary spaces. For more information, go to\n5.1.1  https://support.google.com/mail/?p=NoSuchUser 00721157ae682-756025cb155si27675487b3.513 - gsmtp",
+            "accepted": false,
+            "perm": true,
+            "temp": false
+          }
+        },
+        {
+          "host": "alt1.gmail-smtp-in.l.google.com",
+          "target": {
+            "code": 250,
+            "message": "2.1.5 OK d75a77b69052e-4d15f9c1100si24308021cf.278 - gsmtp",
+            "accepted": true,
+            "perm": false,
+            "temp": false
+          },
+          "random": {
+            "code": 550,
+            "message": "5.1.1 The email account that you tried to reach does not exist. Please try\n5.1.1 double-checking the recipient's email address for typos or\n5.1.1 unnecessary spaces. For more information, go to\n5.1.1  https://support.google.com/mail/?p=NoSuchUser d75a77b69052e-4d16ae0d9a6si24957141cf.565 - gsmtp",
+            "accepted": false,
+            "perm": true,
+            "temp": false
+          }
+        },
+        {
+          "host": "alt3.gmail-smtp-in.l.google.com",
+          "target": {
+            "code": 250,
+            "message": "2.1.5 OK 71dfb90a1353d-54bda52c848si234344e0c.17 - gsmtp",
+            "accepted": true,
+            "perm": false,
+            "temp": false
+          },
+          "random": {
+            "code": 550,
+            "message": "5.1.1 The email account that you tried to reach does not exist. Please try\n5.1.1 double-checking the recipient's email address for typos or\n5.1.1 unnecessary spaces. For more information, go to\n5.1.1  https://support.google.com/mail/?p=NoSuchUser ada2fe7eead31-5a48dc42a14si619870137.13 - gsmtp",
+            "accepted": false,
+            "perm": true,
+            "temp": false
+          }
+        },
+        {
+          "host": "alt2.gmail-smtp-in.l.google.com",
+          "target": {
+            "code": 250,
+            "message": "2.1.5 OK d75a77b69052e-4d520049340si15469841cf.1370 - gsmtp",
+            "accepted": true,
+            "perm": false,
+            "temp": false
+          },
+          "random": {
+            "code": 550,
+            "message": "5.1.1 The email account that you tried to reach does not exist. Please try\n5.1.1 double-checking the recipient's email address for typos or\n5.1.1 unnecessary spaces. For more information, go to\n5.1.1  https://support.google.com/mail/?p=NoSuchUser d75a77b69052e-4d93b0854ffsi3903591cf.570 - gsmtp",
+            "accepted": false,
+            "perm": true,
+            "temp": false
+          }
+        },
+        {
+          "host": "alt4.gmail-smtp-in.l.google.com",
+          "target": {
+            "code": 250,
+            "message": "2.1.5 OK af79cd13be357-84f97a0fbe8si211750885a.508 - gsmtp",
+            "accepted": true,
+            "perm": false,
+            "temp": false
+          },
+          "random": {
+            "code": 550,
+            "message": "5.1.1 The email account that you tried to reach does not exist. Please try\n5.1.1 double-checking the recipient's email address for typos or\n5.1.1 unnecessary spaces. For more information, go to\n5.1.1  https://support.google.com/mail/?p=NoSuchUser af79cd13be357-84f9ba66573si224765685a.1187 - gsmtp",
+            "accepted": false,
+            "perm": true,
+            "temp": false
+          }
+        }
+      ]
+    }
+  ]
+}
