@@ -1,0 +1,15 @@
+# Location: email_validator_project/docker-compose.yml
+version: '3.8'
+services:
+  email_validator_app:
+    # Build the image from the Dockerfile in the current directory.
+    build: .
+    # Give the container a friendly name for easy management.
+    container_name: email-validator-service
+    # This is the key part for running on another port.
+    # It maps port 8002 on your VPS to port 8000 inside the container.
+    # Format is "HOST_PORT:CONTAINER_PORT"
+    ports:
+      - "8002:8000"
+    # Always restart the container if it stops or the server reboots.
+    restart: always

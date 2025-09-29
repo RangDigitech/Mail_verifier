@@ -1,23 +1,17 @@
-# Use a lightweight Python image
-FROM python:3.11-slim
-
-# Set working directory
+# Location: email_validator_project/Dockerfile
+# 1. Start with an official Python base image.
+FROM python:3.10-slim
+# 2. Set the working directory inside the container.
 WORKDIR /app
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy requirements and install
+# 3. Copy the requirements file first to leverage Docker's build cache.
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy app source
-COPY . .
-
-# Expose port
+# 4. Install the Python dependencies.
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+# 5. Copy your application code into the container.
+COPY app.py .
+COPY main.py .
+# 6. Expose the port the app will run on inside the container.
 EXPOSE 8000
-
-# Default command (overridden by docker-compose.yml if needed)
-CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "-b", "0.0.0.0:8000", "app:app"]
+# 7. The command to start the Uvicorn server when the container launches.
+#    --host 0.0.0.0 is crucial to make it accessible from outside the container.
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
