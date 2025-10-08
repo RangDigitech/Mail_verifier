@@ -23,5 +23,5 @@ jobs:
 
       - name: Push to VPS bare repo (triggers post-receive hook)
         run: |
-          git remote add production ssh://${{ secrets.VPS_SSH_USER }}@${{ secrets.VPS_HOST }}/home/deploy/repo/myapp.git || true
+          git remote add production ssh://${{ secrets.VPS_SSH_USER }}@${{ secrets.VPS_HOST }}:/home/deploy/repo/myapp.git || true
           git push -f production main
